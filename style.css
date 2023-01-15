@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+*, html {
+    scroll-behavior: smooth !important;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+.logo-watermark{
+    position: absolute;
+    height: 70vh;
+    left: -7%;
+    top: 15%;
+    z-index: 0;
+    opacity: 12%;
+}
+
+.logo{
+    height: 50px;
+    width: fit-content;
+}
+
+.header-content {
+    padding: 8rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 100%;
+    gap: 20px;
+}
+
+.header-content > p{
+    width: 50%;
+}
+
+.nav{
+    position: absolute;
+    top: 3rem;
+    left: 8rem;
+}
+
+.nav > a{
+    text-decoration: none;
+    color: white;
+    margin-right: 1rem;
+}
+
+.header {
+    position: relative;
+    height: 100vh;
+}
+
+.header h1 {
+    font-size: 3rem;
+}
+
+.header-img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+    position: absolute;
+    z-index: -1;
+}
+
+#about {
+    background: #00009F;
+    color: white;
+    padding: 3rem;
+}
+
+#about>h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.projects {
+    background: #fff;
+    color: #00009F;
+    padding: 3rem;
+}
+
+.projects>h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.project1 {
+    background: url("./Project\ 1.png");
+}
+
+.project2 {
+    background: url("./Project\ 2.png");
+}
+
+.project3 {
+    background: url("./Project\ 3.png");
+}
+
+.project {
+    height: 300px;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: end;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: #00000033 0 0 10px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.project>* {
+    z-index: 1;
+}
+
+.project:hover {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    background: linear-gradient(0deg, #00009F, #ffffff00);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+}

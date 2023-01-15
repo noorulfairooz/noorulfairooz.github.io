@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trash-E : The Trash Sorting Robot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="project.css">
+    <link rel="shortcut icon" href="Logo 2.svg" type="image/x-icon">
+</head>
+
+<body>
+    <img src="Logo 2.svg" alt="Go to Home" class="home-logo" onclick="window.location.href = 'index.html'"
+        title="Home page">
+
+    <video src="./Project 1.MOV" autoplay muted loop></video>
+    <div class="project">
+        <br>
+        <h1>Trash-E : The Trash Sorting Robot</h1>
+        <p>Intro to Mechatronics - Final Project</p><br><hr><br>
+        <div class="project-section">
+            <div class="project-text">
+                <h2>What's the project all about?</h2>
+                <p>The Trash Sorting Robot was my final project for my MTE 100 (Introduction to Mechatronics)
+                    course
+                    in
+                    the University of Waterloo. The assignment was essentially to create a robot of our choice
+                    with
+                    a
+                    couple of requirements such as using multiple sensors and having at least 6 functions.
+                    However,
+                    we
+                    were allowed to use any materials we wanted to create the robot as long as it was safe.
+                    After a
+                    week
+                    of planning, my team of 4 decided to create a robot that will pick up a piece of trash and
+                    sort
+                    it
+                    into its respective area, which were colour coded. We used T - shaped blocks to represent
+                    our
+                    trash,
+                    green for compost, brown for garbage, blue for recycling, as well as red for the starting
+                    zone
+                    and
+                    black for the pick-up zone. </p>
+            </div>
+            <img src="" alt="">
+        </div>
+        <div class="project-section">
+            <div class="project-text">
+                <h2>What tools did I use to make it?</h2>
+                <p>We created Trashy using an EV3 kit we were given, along with aluminium extrusions, wheels,
+                    extra
+                    sensors, strings, and a lot of duct tape to secure everything together. In terms of coding,
+                    we
+                    used RobotC, and each person had different functions assigned to them.</p>
+            </div>
+            <img src="" alt="">
+        </div>
+        <div class="project-section">
+            <div class="project-text">
+                <h2>What did I learn?</h2>
+                <p>I learnt how the manufacturing process and coding came together to create a robot that can be moved
+                    without the need of a joystick or human interference. My coding skills had greatly improved as I
+                    spent a lot of time debugging and changing my code to make it more efficient. I also had to adapt to
+                    problems that arose, such as when the colour sensors did not pick up on certain colours. This meant
+                    we had to change both the physical design and code to counter the problem and make it work. We made
+                    the colour sensors closer to the ground, and made sure that the code could only pick up one colour
+                    and not switch.</p>
+            </div>
+            <img src="" alt="">
+        </div>
+        <div class="project-section">
+            <div class="project-text">
+                <h2>What was my contribution?</h2>
+                <p>I helped in the building of the robot, specifically making the chassis. I used a reference online and
+                    changed it to suit the materials we were given. It did prove to be a challenge at first since none
+                    of the parts would align or stay properly, but with a bit of experimentation and trying different
+                    combinations of designs, we got it to work. As for the coding side, I coded our follow line, colour
+                    path, and finish function. Essentially, the follow line function would see the colours on either
+                    side of the robot, and if one of them detected a colour it would move in the opposite way to correct
+                    its path. For the colour path function, it would detect the colour of the block and then follow a
+                    line until one of the colour sensors near the ground detected that specific colour, and if it did it
+                    would turn and stop once both colour sensors detect the ground. The finish function took Trashy to
+                    the start zone and made it “dance” (rotate a lot) and play a sound.</p>
+            </div>
+            <img src="" alt="">
+        </div>
+        <div class="project-section">
+            <div class="project-text">
+                <h2>What are its implications?</h2>
+                <p>If the robot were to be on a larger scale and can sort multiple variations and sizes of objects, then
+                    it can be a useful application in the real world. For example, there are many types of garbage or
+                    chemicals that can be dangerous if humans were exposed to it, in which case this robot would come in
+                    handy. A robot would also be able to sort trash for longer periods of time than humans and more
+                    efficiently. There could also be multiple robots to detect specific types of trash (ie. non-metal vs
+                    metal using reflectivity) using different types of sensors.</p>
+            </div>
+            <img src="" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
