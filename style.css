@@ -150,3 +150,25 @@ html{
     z-index: 0;
 
 }
+
+.footer{
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+}
+
+.footer .links {
+    display: flex;
+}
+
+.footer .links a{
+    font-size: 90%;
+    padding: 0 10px;
+    border-right: 1px solid #222;
+    margin: 0;
+}
+
+.footer .links a.last{
+    border: none;
+}
