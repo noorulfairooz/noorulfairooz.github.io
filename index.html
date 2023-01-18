@@ -21,18 +21,24 @@
         <div class="nav">
             <a href="#about">About Me</a>
             <a href="#projects">Projects</a>
+            <a href="#interests">Interests</a>
         </div>
         <div class="header-content">
             <img src="Logo.svg" alt="Logo" class="logo">
-            <h1>Hey there! 👋<br> I'm Noorul Fairooz.</h1>
-            <p>I'm a 1B Mechatronics student at the University of Waterloo. I love to bake and play volleyball. This is
+            <h1>Hey there! 👋<br> I am <a href="" class="typewrite" data-period="2000"
+                    data-type='[ "Noorul Fairooz.", " a Coder.", " an Engineer.", " an optimist." , " an enthusiast." ]'>
+                    <span class="wrap"></span></a></h1>
+            <p>I'm Noorul, a 1B Mechatronics student at the University of Waterloo. I love to bake and play volleyball. This is
                 a collection of a few of my works! Enjoy :)</p>
         </div>
     </section>
     <section id="about">
         <h1>About Me 😇</h1>
         <p>
-            <!-- ADD ABOUT HERE -->
+            I am a 1B Mechatronics Engineering student studying at the University of Waterloo. I have many hobbies I enjoy such as baking, playing volleyball, and not surprisingly, coding. I strive for excellence and continue to refine my existing skills. My motto is that there is always room for improvement, as the world is constantly evolving. I am currently seeking 2023 Spring/Summer Internships and would preferably enjoy working as a software engineer or software designer. 
+            <br><br>    
+            I am always up to a challenge and want to continue learning more web frameworks and programming languages. I have completed a variety of projects and have had some experiences in multiple industries, including retail and self-made businesses. I hope you will take the time to look over my personal website and enjoy reading up in more detail about the projects I did. 
+
         </p>
     </section>
     <section class="projects" id="projects">
@@ -55,6 +61,7 @@
             </div>
         </div>
     </section>
+    <hr>
     <section class="footer">
         <h3>Noorul Fairooz</h3>
         <div class="links">
@@ -64,6 +71,64 @@
             <a href="https://github.com/noorulfairooz" class="last">github.com/noorulfairooz</a>
         </div>
     </section>
+    <script>
+        var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.04em solid #fff; padding-right: 5px;}";
+        document.body.appendChild(css);
+    };
+    </script>
 </body>
 
 </html>
